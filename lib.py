@@ -106,3 +106,12 @@ def play_album(album, albums):
     track.object.play()
     while pygame.mixer.get_busy():
       pygame.time.wait(60)
+
+
+#################################
+#       KEY DETECTION FOR       #
+#           CONTROLS            #
+#################################
+
+def check_keys():
+  
