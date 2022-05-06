@@ -98,6 +98,7 @@ def play_track(track, album, albums):
   print("\nNow playing", selected_track.name + "...")
   selected_track.object.play()
   while pygame.mixer.get_busy():
+    check_keys()
     pygame.time.wait(60)
 
 def play_album(album, albums):
@@ -114,4 +115,9 @@ def play_album(album, albums):
 #################################
 
 def check_keys():
+  for event in pygame.event.get():
+    if event.type == pygame.KEYDOWN:
+      if event.key == pygame.K_s:
+        pygame.mixer.stop()
+        
   

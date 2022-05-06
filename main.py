@@ -31,6 +31,8 @@ import lib
 pygame.init()
 pygame.mixer.init()
 
+display = pygame.display.set_mode((300,300))
+
 # Create two Channel objects for music playback
 # and one for alert tones
 main_channel0 = pygame.mixer.Channel(0)
