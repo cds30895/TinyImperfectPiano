@@ -1,0 +1,5 @@
+Add key detection during playback for pause/skip/stop functionality
+Figure out fade in/out
+Figure out Channels
+
+Streamline load_album()? - it is very slow.
