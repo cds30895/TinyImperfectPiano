@@ -80,7 +80,7 @@ def load_album(album, albums):
     # If the file is an .mp3, add the name to the track_names
     # list and append a Song object to Album.track_list.
     for file in dir:
-      if file.name.endswith(".mp3"):
+      if file.name.endswith(".mp3") or file.name.endswith(".wav") or file.name.endswith(".ogg"):
         track_names.append(file.name)
     track_names.sort()
     for track in track_names:
@@ -103,7 +103,7 @@ def play_track(track, album, albums):
 
 def play_album(album, albums):
   for track in albums[album].track_list:
-    print("\nNow playing", track.name + "...")
+    print("\n--Press \"s\" to stop playback.--\nNow playing", track.name + "...")
     track.object.play()
     while pygame.mixer.get_busy():
       pygame.time.wait(60)

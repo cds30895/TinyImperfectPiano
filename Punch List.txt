@@ -1,4 +1,8 @@
 Add key detection during playback for pause/skip/stop functionality
+  pause
+  skip
+x stop
+
 Figure out fade in/out
 Figure out Channels
 
